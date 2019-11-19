@@ -183,10 +183,33 @@
         null,
         1,
         1,
+        1,
         null
       ],
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/spec/features/shelter_show_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/shelter.rb": [
@@ -206,6 +229,11 @@
         null,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
@@ -214,6 +242,6 @@
         null
       ]
     },
-    "timestamp": 1574181044
+    "timestamp": 1574201373
   }
 }
