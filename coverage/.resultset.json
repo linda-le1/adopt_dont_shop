@@ -186,8 +186,17 @@
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
         1,
         null
+      ],
+      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/shelter.rb": [
+        1,
+        null
+      ],
+      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/application_record.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1574123361
+    "timestamp": 1574124217
   }
 }
