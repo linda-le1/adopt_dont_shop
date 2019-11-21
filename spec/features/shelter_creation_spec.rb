@@ -1,26 +1,37 @@
 require 'rails_helper'
 
-RSpec.describe "shelters id page", type: :feature do
-  it "can fill out a form and create a shelter" do
+RSpec.describe 'shelters id page', type: :feature do
+  it 'can hold a form to create a shelter' do
 
-    visit "/shelters"
+    visit '/shelters'
 
-    expect(page).to have_field(shelter[name])
+    expect(page).to have_link('Create New Shelter')
+    click_link 'Create New Shelter'
 
-    Then I see a link to create a new Shelter
-    When I click this link
+    expect(current_path).to eq '/shelters/new'
+
+    expect(page).to have_selector('form')
+    expect(page).to have_field('shelter[name]')
+    expect(page).to have_field('shelter[address]')
+    expect(page).to have_field('shelter[city]')
+    expect(page).to have_field('shelter[state]')
+    expect(page).to have_field('shelter[zip_code]')
+
+  end
+
+  it 'can take information from the form and make a new shelter' do
 
     visit '/shelters/new'
-    Then I am taken to '/shelters/new' where I  see a form for a new shelter
 
-    When I fill out the form with a new shelter's:
-    - name
-    - address
-    - city
-    - state
-    - zip
+    fill_in 'shelter[name]',      with: 'Shelter Test'
+    fill_in 'shelter[address]',   with: '123 Larimer Street'
+    fill_in 'shelter[city]',      with: 'Denver'
+    fill_in 'shelter[state]',     with: 'Colorado'
+    fill_in 'shelter[zip_code]',  with: '80001'
 
-    And I click the button to submit the form
-    Then a `POST` request is sent to '/shelters',
-    a new shelter is created,
-    and I am redirected to the Shelter Index page where I see the new Shelter listed.
+    expect(page).to have_button('Submit')
+    click_button 'Submit'
+
+    assert_equal '/shelters', current_path
+  end
+end
