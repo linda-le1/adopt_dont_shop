@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20191119215407) do
 
   create_table "shelters", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "address"
     t.string "city"
     t.string "state"
