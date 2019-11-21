@@ -14,7 +14,7 @@ class SheltersController < ApplicationController
 
       shelter.save
       redirect_to '/shelters'
-    end
+  end
 
   def new
   end

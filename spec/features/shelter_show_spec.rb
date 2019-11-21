@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "shelters id page", type: :feature do
-  it "can see shelter with id and other attributes" do
+  xit "can see shelter with id and other attributes" do
 
     shelter_1 = Shelter.create(name: "Denver Animal Shelter",
                                address: "123 Colfax Ave",
