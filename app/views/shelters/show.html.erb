@@ -8,3 +8,4 @@
 <p><%= @shelter.zip_code %></p>
 
 <a href='/shelters/<%= @shelter.id %>/edit'>Update This Shelter</a>
+<%= link_to 'Delete This Shelter', "/shelters/#{@shelter.id}", method: :delete %>
