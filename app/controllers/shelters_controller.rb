@@ -37,7 +37,6 @@ class SheltersController < ApplicationController
       zip_code: params[:shelter][:zip_code]
       })
     shelter.save
-    redirect_to '/shelter/#{shelter.id}'
+    redirect_to "/shelters/#{shelter.id}"
   end
-
 end

@@ -28,7 +28,6 @@ RSpec.describe 'shelters show page', type: :feature do
 
   expect(page).to have_button('Submit')
   click_button('Submit')
-
   expect(current_path).to eq "/shelters/#{shelter_1.id}"
 
   end

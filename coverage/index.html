@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-20T23:32:28-07:00">2019-11-20T23:32:28-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-11-20T23:52:06-07:00">2019-11-20T23:52:06-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">95.1%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.97
+       <span class="green">
+         1.04
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>21</b> files in total.
-    <b>102</b> relevant lines. 
-    <span class="green"><b>97</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <b>103</b> relevant lines. 
+    <span class="green"><b>103</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#bb45505e9c2b75ad63a0394663712eaf5e50f314" class="src_link" title="app/controllers/shelters_controller.rb">app/controllers/shelters_controller.rb</a></td>
-        <td class="red strong">76.47 %</td>
-        <td>43</td>
+        <td class="green strong">100.0 %</td>
+        <td>42</td>
         <td>17</td>
-        <td>13</td>
-        <td>4</td>
-        <td>0.9</td>
+        <td>17</td>
+        <td>0</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -224,8 +224,8 @@
         <td class="strong"><a href="#22830d3404e7c968d4e3fd8e7ecb60c37d977618" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>10</td>
-        <td>7</td>
-        <td>7</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -252,12 +252,12 @@
       
       <tr>
         <td class="strong"><a href="#8cee6373a159d5a9725d7832e4bdc609c6133676" class="src_link" title="spec/features/shelter_update_spec.rb">spec/features/shelter_update_spec.rb</a></td>
-        <td class="green strong">94.74 %</td>
-        <td>35</td>
+        <td class="green strong">100.0 %</td>
+        <td>34</td>
         <td>19</td>
-        <td>18</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>19</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
     </tbody>
@@ -316,11 +316,11 @@
         <div class="source_table" id="bb45505e9c2b75ad63a0394663712eaf5e50f314">
   <div class="header">
     <h3>app/controllers/shelters_controller.rb</h3>
-    <h4><span class="red">76.47 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>17</b> relevant lines. 
-      <span class="green"><b>13</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -459,8 +459,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="23">
+          <span class="hits">3</span>
           
           <code class="ruby">    @shelter = Shelter.find(params[:id])</code>
         </li>
@@ -507,14 +507,14 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
           <code class="ruby">    shelter = Shelter.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
           <code class="ruby">    shelter.update({</code>
         </li>
@@ -555,16 +555,16 @@
           <code class="ruby">      })</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
           <code class="ruby">    shelter.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    redirect_to &#39;/shelter/#{shelter.id}&#39;</code>
+          <code class="ruby">    redirect_to &quot;/shelters/#{shelter.id}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
@@ -574,12 +574,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">end</code>
@@ -1840,8 +1834,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1897,10 +1891,10 @@
           <code class="ruby">  get &#39;/shelters/:id/edit&#39;, to: &#39;shelters#edit&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  patch &#39;/shelters/:id&#39;, to: &#39;shelters#update&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -2147,11 +2141,11 @@
         <div class="source_table" id="8cee6373a159d5a9725d7832e4bdc609c6133676">
   <div class="header">
     <h3>spec/features/shelter_update_spec.rb</h3>
-    <h4><span class="green">94.74 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>19</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -2338,31 +2332,25 @@
           <code class="ruby">  click_button(&#39;Submit&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  expect(current_path).to eq &quot;/shelters/#{shelter_1.id}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">  expect(current_path).to eq &quot;/shelters/#{shelter_1.id}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
