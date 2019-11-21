@@ -15,19 +15,18 @@ RSpec.describe 'shelters show page', type: :feature do
   click_link 'Update This Shelter'
   expect(current_path).to eq "/shelters/#{shelter_1.id}/edit"
 
-  expect(page).to have_selector('form')
-  expect(page).to have_field('shelter[name]')
-  expect(page).to have_field('shelter[address]')
-  expect(page).to have_field('shelter[city]')
-  expect(page).to have_field('shelter[state]')
-  expect(page).to have_field('shelter[zip_code]')
+  expect(page).to have_field('name')
+  expect(page).to have_field('address')
+  expect(page).to have_field('city')
+  expect(page).to have_field('state')
+  expect(page).to have_field('zip_code')
 
-  fill_in 'shelter[name]',      with: 'Shelter Example 1'
-  fill_in 'shelter[address]',   with: '987 Colorado Boulevard'
+  fill_in 'name',      with: 'Shelter Example 1'
+  fill_in 'address',   with: '987 Colorado Boulevard'
 
   expect(page).to have_button('Submit')
 
-  click_button('Submit')
+  click_on('Submit')
   expect(current_path).to eq "/shelters/#{shelter_1.id}"
   expect(page).to have_content('Shelter Example 1')
 

@@ -22,13 +22,7 @@ class SheltersController < ApplicationController
 
   def update
     shelter = Shelter.find(params[:id])
-    shelter.update({
-      name: params[:shelter][:name],
-      address: params[:shelter][:address],
-      city: params[:shelter][:city],
-      state: params[:shelter][:state],
-      zip_code: params[:shelter][:zip_code]
-      })
+    shelter.update(shelter_params)
     shelter.save
     redirect_to "/shelters/#{shelter.id}"
   end

@@ -22,7 +22,6 @@ RSpec.describe 'shelters id page', type: :feature do
     fill_in 'city',      with: 'Denver'
     fill_in 'state',     with: 'Colorado'
     fill_in 'zip_code',  with: '80001'
-
     click_button 'Submit'
 
     assert_equal '/shelters', current_path
