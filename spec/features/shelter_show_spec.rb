@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe 'shelters id page', type: :feature do
   it 'can see shelter with id and other attributes' do
 
