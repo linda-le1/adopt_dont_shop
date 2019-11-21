@@ -299,12 +299,6 @@
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         1,
         null,
@@ -337,6 +331,11 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
@@ -354,6 +353,6 @@
         null
       ]
     },
-    "timestamp": 1574370487
+    "timestamp": 1574373681
   }
 }
