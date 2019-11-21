@@ -19,7 +19,7 @@ RSpec.describe 'shelters id page', type: :feature do
 
   end
 
-  it 'can take information from the form and make a new shelter' do
+  it 'can take and submit information in the form' do
 
     visit '/shelters/new'
 

@@ -8,4 +8,4 @@ RSpec.describe 'shelters index page', type: :feature do
 
     expect(page).to have_content(shelter_1.name)
   end
-end
+end   
