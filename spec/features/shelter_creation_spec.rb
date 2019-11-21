@@ -11,8 +11,8 @@ RSpec.describe 'shelters id page', type: :feature do
     expect(current_path).to eq '/shelters/new'
 
     expect(page).to have_selector('form')
-    expect(page).to have_field('shelter[name]')
-    expect(page).to have_field('shelter[address]')
+    expect(page).to have_field('shelter[name]') #just fill in instead of have_field
+    expect(page).to have_field('shelter[address]') #no response test because only care about user interaction 
     expect(page).to have_field('shelter[city]')
     expect(page).to have_field('shelter[state]')
     expect(page).to have_field('shelter[zip_code]')
