@@ -10,10 +10,9 @@ RSpec.describe 'shelters show page', type: :feature do
                              zip_code: '80004')
 
   visit "/shelters/#{shelter_1.id}"
-
   expect(page).to have_link('Update This Shelter')
-  click_link 'Update This Shelter'
 
+  click_link 'Update This Shelter'
   expect(current_path).to eq "/shelters/#{shelter_1.id}/edit"
 
   expect(page).to have_selector('form')
@@ -27,8 +26,10 @@ RSpec.describe 'shelters show page', type: :feature do
   fill_in 'shelter[address]',   with: '987 Colorado Boulevard'
 
   expect(page).to have_button('Submit')
+
   click_button('Submit')
   expect(current_path).to eq "/shelters/#{shelter_1.id}"
+  expect(page).to have_content('Shelter Example 1')
 
   end
 end
