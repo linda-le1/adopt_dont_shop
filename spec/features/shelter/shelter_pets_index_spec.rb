@@ -9,7 +9,7 @@ RSpec.describe 'pets id page', type: :feature do
                                state: 'CO',
                                zip_code: '80004')
 
-    dog = Pet.create!(image: '/',
+    dog = shelter_1.pets.create!(image: '/',
                        name: 'Tofu',
                        approximate_age: 4,
                        sex: 'M',
