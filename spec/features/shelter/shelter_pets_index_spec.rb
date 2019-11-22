@@ -9,7 +9,7 @@ RSpec.describe 'pets id page', type: :feature do
                                state: 'CO',
                                zip_code: '80004')
 
-    dog = shelter_1.pets.create!(image: '/',
+    dog_1 = shelter_1.pets.create!(image: '/',
                        name: 'Tofu',
                        approximate_age: 4,
                        sex: 'M',
@@ -18,9 +18,9 @@ RSpec.describe 'pets id page', type: :feature do
 
      visit "/shelters/#{shelter_1.id}/pets"
 
-     expect(page).to have_content(dog.image)
-     expect(page).to have_content(dog.name)
-     expect(page).to have_content(dog.approximate_age)
-     expect(page).to have_content(dog.sex)
+     expect(page).to have_content(dog_1.image)
+     expect(page).to have_content(dog_1.name)
+     expect(page).to have_content(dog_1.approximate_age)
+     expect(page).to have_content(dog_1.sex)
   end
 end
