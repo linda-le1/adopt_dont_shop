@@ -197,7 +197,7 @@
         1,
         null
       ],
-      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/pet.rb": [
+      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/shelter.rb": [
         1,
         null
       ],
@@ -205,8 +205,12 @@
         1,
         1,
         null
+      ],
+      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/pet.rb": [
+        1,
+        null
       ]
     },
-    "timestamp": 1574394376
+    "timestamp": 1574395689
   }
 }
