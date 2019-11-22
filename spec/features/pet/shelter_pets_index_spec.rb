@@ -8,13 +8,3 @@ RSpec.describe 'pets index page', type: :feature do
                        sex: 'M',
                        shelter_name: 'Denver Animal Shelter'
                        )
-
-    visit '/pets'
-
-    expect(page).to have_content(tofu.image)
-    expect(page).to have_content(tofu.name)
-    expect(page).to have_content(tofu.approximate_age)
-    expect(page).to have_content(tofu.sex)
-    expect(page).to have_content(tofu.shelter_name)
-  end
-end
