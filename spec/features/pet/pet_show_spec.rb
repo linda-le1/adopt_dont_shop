@@ -11,7 +11,7 @@ RSpec.describe 'pets show page', type: :feature do
 
     dog_1 = shelter_1.pets.create!(image: '/',
                        name: 'Tofu',
-                       description: 'I am a neutered male, white Terrier Mix who loves to play fetch.'
+                       description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
                        approximate_age: 4,
                        sex: 'M',
                        shelter_name: 'Denver Animal Shelter'
@@ -26,3 +26,5 @@ RSpec.describe 'pets show page', type: :feature do
     expect(page).to have_content(dog_1.approximate_age)
     expect(page).to have_content(dog_1.sex)
     expect(page).to have_content(dog_1.is_adoptable)
+  end
+end
