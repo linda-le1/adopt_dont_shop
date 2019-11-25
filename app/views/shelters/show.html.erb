@@ -3,6 +3,7 @@
 <a href='/shelters'>Shelter Index</a>
 
 <h1><%= @shelter.name %></h1>
+<%= link_to 'Adoptable Pets', "/shelters/#{@shelter.id}/pets"%>
 
 <p><%= @shelter.address %></p>
 <p><%= @shelter.city %></p>
