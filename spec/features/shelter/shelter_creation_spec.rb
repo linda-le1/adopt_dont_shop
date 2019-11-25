@@ -5,6 +5,7 @@ RSpec.describe 'shelters id page', type: :feature do
 
     visit '/shelters'
     expect(page).to have_link('All Pets', href: "/pets")
+    expect(page).to have_link('All Shelters', href: "/shelters")
 
     expect(page).to have_link('Create New Shelter')
     click_link 'Create New Shelter'
