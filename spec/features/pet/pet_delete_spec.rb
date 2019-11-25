@@ -23,7 +23,7 @@ RSpec.describe 'as a user', type: :feature do
 
     assert_equal "/pets", current_path
 
-    expect(page).to_not have_content(pet_1.name)
+    expect(page).to_not have_content("Tofu")
 
   end
 end
