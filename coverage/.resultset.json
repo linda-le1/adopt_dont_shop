@@ -217,12 +217,7 @@
         1,
         null
       ],
-      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/models/pet.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/controllers/pets_controller.rb": [
+      "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/controllers/shelters_controller.rb": [
         1,
         1,
         1,
@@ -231,19 +226,13 @@
         1,
         0,
         0,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
         0,
         null,
         null,
         1,
-        0,
-        0,
+        null,
+        null,
+        1,
         0,
         null,
         null,
@@ -259,14 +248,13 @@
         null,
         null,
         1,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         1,
         1,
         0,
-        null,
         null,
         null
       ],
@@ -276,6 +264,6 @@
         null
       ]
     },
-    "timestamp": 1574662722
+    "timestamp": 1574664497
   }
 }
