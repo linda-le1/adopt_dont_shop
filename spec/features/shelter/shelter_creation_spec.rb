@@ -4,6 +4,7 @@ RSpec.describe 'shelters id page', type: :feature do
   it 'can hold a form to create a shelter' do
 
     visit '/shelters'
+    expect(page).to have_link('All Pets', href: "/pets")
 
     expect(page).to have_link('Create New Shelter')
     click_link 'Create New Shelter'

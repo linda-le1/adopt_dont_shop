@@ -11,6 +11,7 @@ RSpec.describe 'shelters id pages', type: :feature do
                                zip_code: '80004')
 
     visit "/shelters/#{shelter_1.id}"
+    expect(page).to have_link('All Pets', href: "/pets")
 
     expect(page).to have_content(shelter_1.name)
     expect(page).to have_content(shelter_1.address)

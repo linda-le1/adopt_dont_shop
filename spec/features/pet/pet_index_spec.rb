@@ -17,6 +17,7 @@ RSpec.describe 'pets index page', type: :feature do
                        )
 
     visit '/pets'
+    expect(page).to have_link('All Pets', href: "/pets")
 
     expect(page).to have_content(dog_1.image)
     expect(page).to have_content(dog_1.name)
@@ -26,7 +27,7 @@ RSpec.describe 'pets index page', type: :feature do
 
     expect(page).to have_link('Edit Pet', href: "/pets/#{dog_1.id}/edit")
     expect(page).to have_link('Delete Pet', href: "/pets/#{dog_1.id}")
-    
+
 
   end
 end

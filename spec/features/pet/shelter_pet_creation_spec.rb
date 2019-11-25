@@ -10,6 +10,7 @@ RSpec.describe 'as a user', type: :feature do
                                zip_code: '80004')
 
     visit "/shelters/#{shelter_1.id}/pets"
+    expect(page).to have_link('All Pets', href: "/pets")
     click_on('Add New Pet for Adoption')
     assert_equal "/shelters/#{shelter_1.id}/pets/new", current_path
 
