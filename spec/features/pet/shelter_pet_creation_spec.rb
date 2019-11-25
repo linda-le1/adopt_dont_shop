@@ -11,6 +11,8 @@ RSpec.describe 'as a user', type: :feature do
 
     visit "/shelters/#{shelter_1.id}/pets"
     expect(page).to have_link('All Pets', href: "/pets")
+    expect(page).to have_link('All Shelters', href: "/shelters")
+    
     click_on('Add New Pet for Adoption')
     assert_equal "/shelters/#{shelter_1.id}/pets/new", current_path
 
