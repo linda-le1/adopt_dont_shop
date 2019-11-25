@@ -33,7 +33,7 @@ RSpec.describe 'as a user', type: :feature do
     expect(page).to have_button('Submit')
 
     click_on('Submit')
-    expect(current_path).to eq "/pets/#{pet.id}"
+    expect(current_path).to eq "/pets/#{dog_1.id}"
     expect(page).to have_content('Fido')
 
 
