@@ -22,5 +22,6 @@ RSpec.describe 'as a user', type: :feature do
     click_on 'Edit Pet'
     assert_equal "/pets/#{dog_1.id}/edit", current_path
 
+    
   end
 end
