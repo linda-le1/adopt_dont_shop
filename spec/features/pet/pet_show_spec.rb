@@ -23,6 +23,6 @@ RSpec.describe 'pets show page', type: :feature do
     expect(page).to have_content(dog_1.description)
     expect(page).to have_content(dog_1.approximate_age)
     expect(page).to have_content(dog_1.sex)
-    expect(page).to have_content(dog_1.is_adoptable)
+    expect(page).to have_content("Adoptable")
   end
 end
