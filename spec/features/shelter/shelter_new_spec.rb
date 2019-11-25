@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Shelter new page', type: :feature do
-  describe "As a visitor" do
+  describe 'As a visitor' do
 
     it 'can create a shelter' do
 

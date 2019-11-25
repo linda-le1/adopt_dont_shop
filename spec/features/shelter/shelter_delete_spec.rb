@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'As a visitor', type: :feature do
-  describe "After visiting a shelters show page and clicking on delete that shelter" do
+  describe 'After visiting a shelters show page and clicking on delete that shelter' do
     before :each do
 
       @shelter_1 = Shelter.create(name: 'Denver Animal Shelter',

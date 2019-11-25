@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Shelter index page', type: :feature do
-  describe "As a visitor" do
+  describe 'As a visitor' do
     before :each do
 
       @shelter_1 = Shelter.create!(name: 'Denver Animal Shelter')
