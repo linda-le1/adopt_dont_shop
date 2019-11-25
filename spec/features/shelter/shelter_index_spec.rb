@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'shelters index page', type: :feature do
+RSpec.describe 'As a visitor', type: :feature do
 
   before :each do
 
     @shelter_1 = Shelter.create!(name: 'Denver Animal Shelter')
     @shelter_2 = Shelter.create!(name: 'Colorado Shiba Inu Rescue')
-    
+
  end
 
   it 'can see all shelters and links to their id pages' do
@@ -21,7 +21,7 @@ RSpec.describe 'shelters index page', type: :feature do
 
   end
 
-  it 'can hold links to the pet and shelter index pages' do
+  it 'can see links to the pet and shelter index pages' do
 
     visit '/shelters'
 
@@ -30,7 +30,7 @@ RSpec.describe 'shelters index page', type: :feature do
 
   end
 
-  it 'can hold links to edit and delete shelters' do
+  it 'can see links to edit and delete shelters' do
 
     visit '/shelters'
 
