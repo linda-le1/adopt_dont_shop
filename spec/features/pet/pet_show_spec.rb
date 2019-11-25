@@ -17,6 +17,7 @@ RSpec.describe 'pets show page', type: :feature do
                        shelter_name: 'Denver Animal Shelter'
                        )
     visit "pets/#{dog_1.id}"
+    expect(page).to have_link('All Pets', href: "/pets")
 
     expect(page).to have_content(dog_1.image)
     expect(page).to have_content(dog_1.name)

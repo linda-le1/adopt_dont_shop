@@ -17,6 +17,7 @@ RSpec.describe 'pets id page', type: :feature do
                        )
 
      visit "/shelters/#{shelter_1.id}/pets"
+     expect(page).to have_link('All Pets', href: "/pets")
 
      expect(page).to have_content(dog_1.image)
      expect(page).to have_content(dog_1.name)

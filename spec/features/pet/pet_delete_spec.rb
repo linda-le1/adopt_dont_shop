@@ -18,6 +18,7 @@ RSpec.describe 'as a user', type: :feature do
                        )
 
     visit "pets/#{dog_1.id}"
+    expect(page).to have_link('All Pets', href: "/pets")
 
     click_on 'Delete Pet'
 
