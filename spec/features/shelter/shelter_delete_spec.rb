@@ -1,15 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe 'user delete shelter', type: :feature do
+RSpec.describe 'As a visitor', type: :feature do
+
+  before :each do
+
+    @shelter_1 = Shelter.create(name: 'Denver Animal Shelter',
+                                   address: '123 Colfax Ave',
+                                   city: 'Denver',
+                                   state: 'CO',
+                                   zip_code: '80004')
+
+  end
+
   it 'can delete an existing shelter' do
 
-    shelter_1 = Shelter.create(name: 'Denver Animal Shelter',
-                               address: '123 Colfax Ave',
-                               city: 'Denver',
-                               state: 'CO',
-                               zip_code: '80004')
-
-    visit "/shelters/#{shelter_1.id}"
+    visit "/shelters/#{@shelter_1.id}"
     expect(page).to have_link('All Pets', href: "/pets")
     expect(page).to have_link('All Shelters', href: "/shelters")
 
@@ -18,6 +23,6 @@ RSpec.describe 'user delete shelter', type: :feature do
 
     expect(current_path).to eq "/shelters"
 
-    expect(page).to_not have_content(shelter_1.name)
+    expect(page).to_not have_content(@shelter_1.name)
   end
 end
