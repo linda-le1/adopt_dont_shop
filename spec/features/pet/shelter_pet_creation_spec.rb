@@ -12,7 +12,6 @@ RSpec.describe 'as a user', type: :feature do
     visit "/shelters/#{shelter_1.id}/pets"
 
     click_on('Add New Pet for Adoption')
-
     assert_equal "/shelters/:shelter_1.id/pets/new", current_path
 
     fill_in 'image',      with: 'test_url'
@@ -29,6 +28,6 @@ RSpec.describe 'as a user', type: :feature do
     expect(page).to have_content('Active Shiba Inu who enjoys long walks.')
     expect(page).to have_content('Male')
     expect(page).to have_content ('Adoptable')
-    
+
   end
 end
