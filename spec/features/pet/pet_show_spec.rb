@@ -16,9 +16,7 @@ RSpec.describe 'pets show page', type: :feature do
                        sex: 'M',
                        shelter_name: 'Denver Animal Shelter'
                        )
-
-
-    visit '/pets/:id'
+    visit "pets/#{dog_1.id}"
 
     expect(page).to have_content(dog_1.image)
     expect(page).to have_content(dog_1.name)
