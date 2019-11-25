@@ -20,11 +20,11 @@ RSpec.describe 'as a user', type: :feature do
     fill_in 'sex',  with: 'Male'
     click_button 'Submit'
 
-    assert_equal "/shelters/#{shelter_1.id}", current_path
+    assert_equal "/shelters/#{shelter_1.id}/pets", current_path
 
-    expect(page).to have_content('test url')
     expect(page).to have_content('Kumo')
     expect(page).to have_content('Active Shiba Inu who enjoys long walks.')
+    expect(page).to have_content(2)
     expect(page).to have_content('Male')
     expect(page).to have_content ('Adoptable')
 

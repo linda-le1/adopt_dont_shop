@@ -4,8 +4,9 @@
   <p> <%= pet.image %></p>
   <h2> <%= pet.name %></h2>
   <p> <%= pet.approximate_age %></p>
+  <p> <%= pet.description%></p>
   <p> <%= pet.sex %></p>
-  <p> <%= pet.shelter_name %> </p>
+  <p> <%= pet.is_adoptable %> </p>
 <% end %>
 
 <%= link_to 'Add New Pet for Adoption', "/shelters/#{@shelter.id}/pets/new" %>
