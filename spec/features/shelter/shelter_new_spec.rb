@@ -1,23 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe 'shelters id page', type: :feature do
-  it 'can hold a form to create a shelter' do
+RSpec.describe 'As a visitor', type: :feature do
+  it 'can create a shelter' do
 
     visit '/shelters'
-    expect(page).to have_link('All Pets', href: "/pets")
-    expect(page).to have_link('All Shelters', href: "/shelters")
 
     expect(page).to have_link('Create New Shelter')
     click_link 'Create New Shelter'
 
     expect(current_path).to eq '/shelters/new'
-
-    expect(page).to have_selector('form')
-  end
-
-  it 'can take and submit information in the form' do
-
-    visit '/shelters/new'
 
     fill_in 'name',      with: 'Shelter Test'
     fill_in 'address',   with: '123 Larimer Street'
