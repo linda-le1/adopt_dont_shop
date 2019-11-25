@@ -15,8 +15,6 @@ RSpec.describe 'As a visitor', type: :feature do
     it 'can delete an existing shelter' do
 
       visit "/shelters/#{@shelter_1.id}"
-      expect(page).to have_link('All Pets', href: "/pets")
-      expect(page).to have_link('All Shelters', href: "/shelters")
 
       expect(page).to have_link('Delete This Shelter')
       click_link 'Delete This Shelter'

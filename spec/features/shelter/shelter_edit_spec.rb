@@ -12,6 +12,15 @@ RSpec.describe 'As a visitor', type: :feature do
 
     end
 
+    it 'can see links to shelter id pages for all shelters listed' do
+
+      visit "/shelters/#{@shelter_1.id}/edit"
+
+      expect(page).to have_link('All Pets', href: '/pets')
+      expect(page).to have_link('All Shelters', href: '/shelters')
+
+    end
+
     xit 'can see prepopulated info on that shelter in the form' do
     end
 

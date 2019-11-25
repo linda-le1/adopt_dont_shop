@@ -1,43 +1,55 @@
 require 'rails_helper'
 
 RSpec.describe 'as a user', type: :feature do
-  it 'can update a pet on the show page'  do
+  describe 'After visiting a pets show page and clicking on edit that pet' do
+    before :each do
+      @shelter_1 = Shelter.create!(name: 'Denver Animal Shelter',
+                                 address: '123 Colfax Ave',
+                                 city: 'Denver',
+                                 state: 'CO',
+                                 zip_code: '80004')
 
-    shelter_1 = Shelter.create!(name: 'Denver Animal Shelter',
-                               address: '123 Colfax Ave',
-                               city: 'Denver',
-                               state: 'CO',
-                               zip_code: '80004')
+      @dog_1 = @shelter_1.pets.create!(image: '/',
+                         name: 'Tofu',
+                         description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
+                         approximate_age: 4,
+                         sex: 'M',
+                         shelter_name: 'Denver Animal Shelter'
+                         )
 
-    dog_1 = shelter_1.pets.create!(image: '/',
-                       name: 'Tofu',
-                       description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
-                       approximate_age: 4,
-                       sex: 'M',
-                       shelter_name: 'Denver Animal Shelter'
-                       )
+    end
 
-    visit "pets/#{dog_1.id}"
+    it 'can see links to edit and delete pets' do
 
-    click_on 'Edit Pet'
-    assert_equal "/pets/#{dog_1.id}/edit", current_path
-    expect(page).to have_link('All Pets', href: "/pets")
-    expect(page).to have_link('All Shelters', href: "/shelters")
+      visit "/pets/#{@dog_1.id}/edit"
 
-    expect(page).to have_field('name')
-    expect(page).to have_field('description')
-    expect(page).to have_field('approximate_age')
-    expect(page).to have_field('sex')
+      expect(page).to have_link('Delete Pet', href: "/pets/#{@dog_1.id}")
 
-    fill_in 'name',      with: 'Fido'
-    fill_in 'description',   with: 'Sweet terrier mix who would love a quieter home.'
+    end
 
-    expect(page).to have_button('Submit')
+    xit 'can see prepopulated info on that pet in the form' do
+    end
 
-    click_on('Submit')
-    expect(current_path).to eq "/pets/#{dog_1.id}"
-    expect(page).to have_content('Fido')
+    it 'can update a pet on the show page' do
 
+      visit "pets/#{@dog_1.id}"
 
+      click_on 'Edit Pet'
+      assert_equal "/pets/#{@dog_1.id}/edit", current_path
+
+      expect(page).to have_field('name')
+      expect(page).to have_field('description')
+      expect(page).to have_field('approximate_age')
+      expect(page).to have_field('sex')
+
+      fill_in 'name',      with: 'Fido'
+      fill_in 'description',   with: 'Sweet terrier mix who would love a quieter home.'
+
+      expect(page).to have_button('Submit')
+
+      click_on('Submit')
+      expect(current_path).to eq "/pets/#{@dog_1.id}"
+      expect(page).to have_content('Fido')
+    end
   end
 end

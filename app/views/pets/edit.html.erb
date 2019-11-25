@@ -1,6 +1,7 @@
 <h1> <%= link_to 'All Pets', "/pets" %> </h1>
 <h1> <%= link_to 'All Shelters', "/shelters" %> </h1>
 <h1> Edit Pet Listing </h1>
+<p><%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %></p>
 
 <p> Edit the following information: </p>
 <%= form_tag "/pets/#{@pet.id}", method: 'patch' do %>
