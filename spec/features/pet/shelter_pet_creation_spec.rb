@@ -10,9 +10,8 @@ RSpec.describe 'as a user', type: :feature do
                                zip_code: '80004')
 
     visit "/shelters/#{shelter_1.id}/pets"
-
     click_on('Add New Pet for Adoption')
-    assert_equal "/shelters/:shelter_1.id/pets/new", current_path
+    assert_equal "/shelters/#{shelter_1.id}/pets/new", current_path
 
     fill_in 'image',      with: 'test_url'
     fill_in 'name',   with: 'Kumo'

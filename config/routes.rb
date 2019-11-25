@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   delete '/shelters/:id', to: 'shelters#destroy'
 
   get '/pets', to: 'pets#index'
-  get '/shelter/:id/pets/new', to: 'pets#new'
   get '/pets/:id', to: 'pets#show'
   get '/shelters/:id/pets', to: 'pets#list_by_shelter'
+  get '/shelters/:id/pets/new', to: 'pets#new'
 
 end
