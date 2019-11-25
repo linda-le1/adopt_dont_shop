@@ -21,7 +21,6 @@ RSpec.describe 'as a user', type: :feature do
     click_button 'Submit'
 
     assert_equal "/shelters/#{shelter_1.id}/pets", current_path
-    require "pry"; binding.pry
     expect(page).to have_content('Kumo')
     expect(page).to have_content('Active Shiba Inu who enjoys long walks.')
     expect(page).to have_content(2)
