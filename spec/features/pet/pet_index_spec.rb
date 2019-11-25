@@ -25,7 +25,7 @@ RSpec.describe 'pets index page', type: :feature do
     expect(page).to have_content(dog_1.shelter_name)
 
     expect(page).to have_link('Edit Pet', href: "/pets/#{dog_1.id}/edit")
-    expect(page).to have_link('Delete Pet', href: "/shelters/#{dog_1.id}")
+    expect(page).to have_link('Delete Pet', href: "/pets/#{dog_1.id}")
 
 
   end
