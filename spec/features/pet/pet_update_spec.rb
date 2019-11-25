@@ -22,6 +22,20 @@ RSpec.describe 'as a user', type: :feature do
     click_on 'Edit Pet'
     assert_equal "/pets/#{dog_1.id}/edit", current_path
 
-    
+    expect(page).to have_field('name')
+    expect(page).to have_field('description')
+    expect(page).to have_field('approximate_age')
+    expect(page).to have_field('sex')
+
+    fill_in 'name',      with: 'Fido'
+    fill_in 'description',   with: 'Sweet terrier mix who would love a quieter home.'
+
+    expect(page).to have_button('Submit')
+
+    click_on('Submit')
+    expect(current_path).to eq "/pets/#{pet.id}"
+    expect(page).to have_content('Fido')
+
+
   end
 end
