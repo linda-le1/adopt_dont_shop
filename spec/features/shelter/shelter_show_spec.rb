@@ -40,7 +40,7 @@ RSpec.describe 'As a visitor', type: :feature do
 
   end
 
-  it 'can access all adoptable pets at that shelter' do
+  it 'can see all adoptable pets at that shelter and their attributes' do
 
     visit "/shelters/#{@shelter_1.id}"
 
