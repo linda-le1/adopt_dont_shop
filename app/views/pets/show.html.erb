@@ -2,7 +2,11 @@
 <p><%= @pet.image %></p>
 <p><%= @pet.name %></p>
 <p><%= @pet.description %></p>
-save_and_open_page
 <p><%= @pet.approximate_age%></p>
 <p><%= @pet.sex %></p>
-<p><%= @pet.is_adoptable %></p>
+
+<% if @pet.is_adoptable %>
+ <p>Adoptable</p>
+<% else %>
+ <p>Adoption Pending</p>
+<% end %>

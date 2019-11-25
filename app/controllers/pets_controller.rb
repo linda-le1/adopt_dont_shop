@@ -22,7 +22,6 @@ class PetsController < ApplicationController
     redirect_to "/shelters/#{shelter.id}/pets"
   end
 
-
   private
     def pet_params
       params.permit(:image, :name, :approximate_age, :description, :sex)
