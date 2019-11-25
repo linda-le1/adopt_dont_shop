@@ -193,6 +193,8 @@
         1,
         1,
         1,
+        1,
+        null,
         null
       ],
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
@@ -448,6 +450,21 @@
         1,
         null,
         null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/lindale/turing/mod2/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
@@ -497,6 +514,6 @@
         null
       ]
     },
-    "timestamp": 1574648852
+    "timestamp": 1574652328
   }
 }
