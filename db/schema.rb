@@ -38,5 +38,5 @@ ActiveRecord::Schema.define(version: 20191125042512) do
     t.string "zip_code"
   end
 
-  add_foreign_key "pets", "shelters"
+  add_foreign_key "pets", "shelters", on_delete: :cascade
 end
