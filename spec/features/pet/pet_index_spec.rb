@@ -23,5 +23,10 @@ RSpec.describe 'pets index page', type: :feature do
     expect(page).to have_content(dog_1.approximate_age)
     expect(page).to have_content(dog_1.sex)
     expect(page).to have_content(dog_1.shelter_name)
+
+    expect(page).to have_link('Edit Pet', href: "/pets/#{dog_1.id}/edit")
+    expect(page).to have_link('Delete Pet', href: "/pets/#{dog_1.id}")
+
+
   end
 end
