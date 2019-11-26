@@ -40,6 +40,7 @@ RSpec.describe 'Shelter index page', type: :feature do
       visit '/shelters'
 
       expect(page).to have_link('Create New Shelter')
+      click_on 'Create New Shelter'
       assert_equal '/shelters/new', current_path
 
     end

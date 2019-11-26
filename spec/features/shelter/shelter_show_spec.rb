@@ -11,7 +11,7 @@ RSpec.describe 'Shelter show page', type: :feature do
                                  zip_code: '80004')
 
 
-      @dog_1 = @shelter_1.pets.create!(image: '/',
+      @dog_1 = @shelter_1.pets.create!(image_url: '/',
                                        name: 'Tofu',
                                        approximate_age: 4,
                                        sex: 'M',
@@ -49,7 +49,7 @@ RSpec.describe 'Shelter show page', type: :feature do
       click_on('Adoptable Pets')
       expect(current_path).to eq "/shelters/#{@shelter_1.id}/pets"
 
-      expect(page).to have_content(@dog_1.image)
+      expect(page).to have_xpath("//img[@src='test_url']")
       expect(page).to have_content(@dog_1.name)
       expect(page).to have_content(@dog_1.approximate_age)
       expect(page).to have_content(@dog_1.sex)

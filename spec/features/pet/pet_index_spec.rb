@@ -9,11 +9,11 @@ RSpec.describe 'Pets index page', type: :feature do
                                  state: 'CO',
                                  zip_code: '80004')
 
-      @dog_1 = @shelter_1.pets.create!(image: '/',
+      @dog_1 = @shelter_1.pets.create!(image_url: '/',
                          name: 'Tofu',
                          approximate_age: 4,
                          sex: 'M',
-                         shelter_name: 'Denver Animal Shelter'
+                         description: 'I am a neutered male, white Terrier Mix who loves to play fetch.'
                          )
     end
 
@@ -39,7 +39,7 @@ RSpec.describe 'Pets index page', type: :feature do
 
       visit '/pets'
 
-      expect(page).to have_content(@dog_1.image)
+      expect(page).to have_xpath("//img[@src='#{@dog_1.image_url}']")
       expect(page).to have_content(@dog_1.name)
       expect(page).to have_content(@dog_1.approximate_age)
       expect(page).to have_content(@dog_1.sex)

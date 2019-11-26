@@ -9,12 +9,11 @@ RSpec.describe 'as a user', type: :feature do
                                  state: 'CO',
                                  zip_code: '80004')
 
-      @dog_1 = @shelter_1.pets.create!(image: '/',
+      @dog_1 = @shelter_1.pets.create!(image_url: '/',
                          name: 'Tofu',
                          description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
                          approximate_age: 4,
                          sex: 'M',
-                         shelter_name: 'Denver Animal Shelter'
                          )
 
     end
@@ -30,6 +29,7 @@ RSpec.describe 'as a user', type: :feature do
       assert_equal "/pets/#{@dog_1.id}/edit", current_path
 
       expect(page).to have_field('name')
+      expect(page).to have_field('image_url')
       expect(page).to have_field('description')
       expect(page).to have_field('approximate_age')
       expect(page).to have_field('sex')
