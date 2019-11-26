@@ -1,9 +1,12 @@
-<h1> List of All Shelters </h1>
+<div class='secondary-nav'>
+  <%= link_to 'Create New Shelter', '/shelters/new', method: :get%>
+</div>
 
-<%= button_to 'Create New Shelter', '/shelters/new', method: :get%>
-
+<h1> Adopt Don't Shop: Shelter List </h1>
 <% @shelters.each do |shelter| %>
-    <h2> <%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
-    <%= button_to 'Edit This Shelter', "/shelters/#{shelter.id}/edit", class: 'button1', method: :get%>
-    <%= button_to 'Delete This Shelter', "/shelters/#{shelter.id}", method: :delete, class: 'button1' %>
+    <div class='center-div'>
+      <h2> <%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
+      <%= link_to 'Edit This Shelter', "/shelters/#{shelter.id}/edit", class: 'button-left', method: :get%>
+      <%= link_to 'Delete This Shelter', "/shelters/#{shelter.id}", method: :delete, class: 'button-right' %>
+    </div>
 <% end %>
