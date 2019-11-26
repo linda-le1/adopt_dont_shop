@@ -10,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lato:300,400&display=swap" rel="stylesheet">
 
   </head>
-
   <body>
-    <nav class = "navbar">
-  <%= link_to "Pets", "/pets" %><%= link_to "Shelters", "/shelters" %>
-  
+    <nav>
+      <ul>
+        <li><%= link_to "All Pets", "/pets" %></li>
+        <li><%= link_to "All Shelters", "/shelters" %></li>
+      </ul>
     </nav>
     <%= yield %>
   </body>

@@ -1,11 +1,9 @@
-<h1> <%= link_to 'All Pets', "/pets" %> </h1>
-<h1> <%= link_to 'All Shelters', "/shelters" %> </h1>
-<h1> All Shelters </h1>
+<h1> List of All Shelters </h1>
+
+<%= button_to 'Create New Shelter', '/shelters/new', method: :get%>
 
 <% @shelters.each do |shelter| %>
-  <h2> <%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
-  <p><%= link_to 'Edit This Shelter', "/shelters/#{shelter.id}/edit"%></p>
-  <p><%= link_to 'Delete This Shelter', "/shelters/#{shelter.id}", method: :delete %></p>
+    <h2> <%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
+    <%= button_to 'Edit This Shelter', "/shelters/#{shelter.id}/edit", class: 'button1', method: :get%>
+    <%= button_to 'Delete This Shelter', "/shelters/#{shelter.id}", method: :delete, class: 'button1' %>
 <% end %>
-
-<%= link_to 'Create New Shelter', '/shelters/new'%>
