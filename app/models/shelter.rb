@@ -1,5 +1,9 @@
 class Shelter < ApplicationRecord
   has_many :pets
   validates_associated :pets
-  validates_presence_of :name, :address, :city, :state, :zip_code
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
+  validates :zip_code, presence: true, :length => { :is => 5 }
 end
