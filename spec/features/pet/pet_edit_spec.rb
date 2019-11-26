@@ -9,21 +9,12 @@ RSpec.describe 'as a user', type: :feature do
                                  state: 'CO',
                                  zip_code: '80004')
 
-      @dog_1 = @shelter_1.pets.create!(image: '/',
+      @dog_1 = @shelter_1.pets.create!(image_url: '/',
                          name: 'Tofu',
                          description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
                          approximate_age: 4,
                          sex: 'M',
-                         shelter_name: 'Denver Animal Shelter'
                          )
-
-    end
-
-    it 'can see links to edit and delete pets' do
-
-      visit "/pets/#{@dog_1.id}/edit"
-
-      expect(page).to have_link('Delete Pet', href: "/pets/#{@dog_1.id}")
 
     end
 
@@ -38,6 +29,7 @@ RSpec.describe 'as a user', type: :feature do
       assert_equal "/pets/#{@dog_1.id}/edit", current_path
 
       expect(page).to have_field('name')
+      expect(page).to have_field('image_url')
       expect(page).to have_field('description')
       expect(page).to have_field('approximate_age')
       expect(page).to have_field('sex')
@@ -49,7 +41,10 @@ RSpec.describe 'as a user', type: :feature do
 
       click_on('Submit')
       expect(current_path).to eq "/pets/#{@dog_1.id}"
+
       expect(page).to have_content('Fido')
+      expect(page).to have_content('Sweet terrier mix who would love a quieter home.')
+
     end
   end
 end

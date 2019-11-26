@@ -10,7 +10,7 @@ RSpec.describe 'As a visitor', type: :feature do
                                  state: 'CO',
                                  zip_code: '80004')
 
-      @dog_1 = @shelter_1.pets.create!(image: '/',
+      @dog_1 = @shelter_1.pets.create!(image_url: '/',
                          name: 'Tofu',
                          description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
                          approximate_age: 4,
@@ -34,4 +34,4 @@ RSpec.describe 'As a visitor', type: :feature do
 
     end
   end
-end 
+end

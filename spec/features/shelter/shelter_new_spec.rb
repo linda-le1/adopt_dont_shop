@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Shelter new page', type: :feature do
   describe 'As a visitor' do
 
-    it 'can see links to the pet and shelter index pages' do
+    it 'can see links at top of page that go to pet and shelter indexes' do
 
       visit '/shelters/new'
 
