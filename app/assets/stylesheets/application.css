@@ -24,7 +24,6 @@
 body {
   margin: 0;
   font-size: 1em;
-  font-family: Helvetica, Verdana, sans-serif;
   background-color: #3AAFA9;
 }
 
@@ -32,15 +31,12 @@ h1 {
   text-align: center;
   font-size: 2.5em;
   color: #ccc;
-  font-family: Helvetica, Verdana, sans-serif;
-  padding: 40px;
 }
 
 h2 {
   text-align: center;
   font-size: 1.5em;
   color: #ccc;
-  font-family: Helvetica, Verdana, sans-serif;
   padding: 10px;
 }
 
@@ -73,7 +69,6 @@ li a {
  text-decoration: none;
  color: #ccc;
  font: 25px;
- font-family: Helvetica, Verdana, sans-serif;
  text-transform: uppercase;
  -webkit-transition: all 0.5s ease;
 }
