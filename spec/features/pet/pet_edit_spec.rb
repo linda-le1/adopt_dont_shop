@@ -18,7 +18,19 @@ RSpec.describe 'as a user', type: :feature do
 
     end
 
-    xit 'can see prepopulated info on that pet in the form' do
+    it 'can see prepopulated info on that pet in the form' do
+
+      visit "pets/#{@dog_1.id}"
+
+      click_on 'Edit Pet'
+      assert_equal "/pets/#{@dog_1.id}/edit", current_path
+      save_and_open_page
+      # expect(page).to have_content('@dog_1.name')
+      # expect(page).to have_content('@dog_1.image_url')
+      # expect(page).to have_content('@dog_1.description')
+      # expect(page).to have_content('@dog_1.approximate_age')
+      # expect(page).to have_content('@dog_1.sex')
+
     end
 
     it 'can update a pet on the show page' do
