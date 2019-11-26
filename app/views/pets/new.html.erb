@@ -1,7 +1,5 @@
-<h1> <%= link_to 'All Pets', "/pets" %> </h1>
-<h1> <%= link_to 'All Shelters', "/shelters" %> </h1>
 <h1> Add a New Pet for Adoption </h1>
-<%= form_tag "/shelters/#{@shelter.id}/pets" do %>
+<%= form_tag "/shelters/#{@shelter.id}/pets", class:'center-form' do %>
   <%= label_tag :image_url %>
   <%= text_field_tag :image_url %><br/>
   <%= label_tag :name %>
@@ -12,5 +10,6 @@
   <%= text_field_tag :approximate_age %><br/>
   <%= label_tag :sex %>
   <%= text_field_tag :sex %><br/>
-<%= submit_tag 'Submit' %>
+<p><%= submit_tag 'Submit' %></p>
+</div>
 <% end %>

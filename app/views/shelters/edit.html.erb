@@ -1,8 +1,6 @@
-<h1> <%= link_to 'All Pets', "/pets" %> </h1>
-<h1> <%= link_to 'All Shelters', "/shelters" %> </h1>
 <h1> Edit Shelter Listing </h1>
-
-<p> Edit the following information: </p>
+<div class='center-form'>
+<h2> Edit the following information: </h2>
 <%= form_tag "/shelters/#{@shelter.id}", method: 'patch' do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %><br/>
@@ -16,3 +14,4 @@
   <%= text_field_tag :zip_code %><br/>
 <%= submit_tag 'Submit' %>
 <% end %>
+</div>

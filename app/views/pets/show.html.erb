@@ -1,16 +1,16 @@
-<h1> <%= link_to 'All Pets', "/pets" %> </h1>
-<h1> <%= link_to 'All Shelters', "/shelters" %> </h1>
-<p><%= image_tag("#{@pet.image_url}", {:style => "width:250px;"}) %></p>
-<p><%= @pet.name %></p>
-<p><%= @pet.description %></p>
-<p><%= @pet.approximate_age%></p>
-<p><%= @pet.sex %></p>
+<div class='center-div'>
+<%= image_tag("#{@pet.image_url}", {:style => "width:300px;"}) %>
+<h2><%= @pet.name %></h2>
+<p>Description: <%= @pet.description %></p>
+<p>Approximate Age: <%= @pet.approximate_age%></p>
+<p>Sex: <%= @pet.sex %></p>
 <% if @pet.is_adoptable %>
- <p>Adoptable</p>
+ <p>Status: Adoptable</p>
 <% else %>
- <p>Adoption Pending</p>
+ <p>Status: Adoption Pending</p>
 <% end %>
 
-<%= link_to 'Edit Pet', "/pets/#{@pet.id}/edit" %>
+<p><%= link_to 'Edit Pet', "/pets/#{@pet.id}/edit" %></p>
 
-<%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %>
+<p><%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %></p>
+</div>

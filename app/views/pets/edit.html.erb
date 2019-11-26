@@ -1,9 +1,8 @@
-<h1> <%= link_to 'All Pets', "/pets" %> </h1>
-<h1> <%= link_to 'All Shelters', "/shelters" %> </h1>
 <h1> Edit Pet Listing </h1>
-<p><%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %></p>
+<h2><%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %></h2>
 
-<p> Edit the following information: </p>
+<div class='center-form'>
+<h2> Edit the following information: </h2>
 <%= form_tag "/pets/#{@pet.id}", method: 'patch' do %>
   <%= label_tag :image_url %>
   <%= text_field_tag :image_url %><br/>
@@ -17,3 +16,4 @@
   <%= text_field_tag :sex %><br/>
 <%= submit_tag 'Submit' %>
 <% end %>
+</div>

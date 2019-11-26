@@ -18,19 +18,19 @@ shelter_2 = Shelter.create!(name: 'Colorado Magical Creatures Rescue',
                             state: 'CO',
                             zip_code: '80012')
 
-shelter_1.pets.create!(image: 'https://media.wired.com/photos/5dd593a829b9c40008b179b3/master/w_2560%2Cc_limit/Cul-BabyYoda_mandalorian-thechild-1_af408bfd.jpg',
+shelter_1.pets.create!(image_url: 'https://media.wired.com/photos/5dd593a829b9c40008b179b3/master/w_2560%2Cc_limit/Cul-BabyYoda_mandalorian-thechild-1_af408bfd.jpg',
                        name: 'Baby Yoda',
                        description: 'I am an adorable one strong with the Force. Enjoys eating frogs.',
                        approximate_age: 50,
                        sex: 'M',
                        )
-shelter_1.pets.create!(image: 'https://cdn3.movieweb.com/i/article/HIxWc8aYAdMq5IYlYo0YPjfnqpUYfh/798:75/Gremlins-Movie-1984-Gizmo-Original-Villain.jpg',
+shelter_1.pets.create!(image_url: 'https://cdn3.movieweb.com/i/article/HIxWc8aYAdMq5IYlYo0YPjfnqpUYfh/798:75/Gremlins-Movie-1984-Gizmo-Original-Villain.jpg',
                         name: 'Gizmo',
                         description: 'I am a very fluffy, kind Mogwai. Do not place near water.',
                         approximate_age: 2,
                         sex: 'M',
                       )
-shelter_2.pets.create!(image: 'https://img1.looper.com/img/gallery/the-untold-truth-of-baby-groot/-1495639424.jpg',
+shelter_2.pets.create!(image_url: 'https://img1.looper.com/img/gallery/the-untold-truth-of-baby-groot/-1495639424.jpg',
                         name: 'Grooty',
                         description: 'I am a lovable, high-energy Flora Colossus. My ideal home will dedicate more time to help me learn how to press buttons.',
                         approximate_age: 1,
