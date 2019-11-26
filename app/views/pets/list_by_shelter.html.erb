@@ -3,6 +3,7 @@
 <h1>Pets At This Shelter</h1>
 
 <% @pets.each do |pet| %>
+  <p><%= image_tag("#{pet.image}", {:style => "width:250px;"}) %></p>
   <p> <%= pet.image %></p>
   <h2> <%= pet.name %></h2>
   <p> <%= pet.approximate_age %></p>

@@ -19,14 +19,6 @@ RSpec.describe 'as a user', type: :feature do
 
     end
 
-    it 'can see links to edit and delete pets' do
-
-      visit "/pets/#{@dog_1.id}/edit"
-
-      expect(page).to have_link('Delete Pet', href: "/pets/#{@dog_1.id}")
-
-    end
-
     xit 'can see prepopulated info on that pet in the form' do
     end
 
@@ -49,7 +41,10 @@ RSpec.describe 'as a user', type: :feature do
 
       click_on('Submit')
       expect(current_path).to eq "/pets/#{@dog_1.id}"
+
       expect(page).to have_content('Fido')
+      expect(page).to have_content('Sweet terrier mix who would love a quieter home.')
+
     end
   end
 end

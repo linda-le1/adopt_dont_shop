@@ -9,7 +9,7 @@ RSpec.describe 'Shelter index page', type: :feature do
 
    end
 
-    it 'can see all shelters and links to their id pages' do
+    it 'can see the name of each shelter in the system' do
 
       visit '/shelters'
 
@@ -26,12 +26,21 @@ RSpec.describe 'Shelter index page', type: :feature do
 
     end
 
-    it 'can see links to the pet and shelter index pages' do
+    it 'can see links at top of page that go to pet and shelter indexes' do
 
       visit '/shelters'
 
       expect(page).to have_link('All Pets', href: '/pets')
       expect(page).to have_link('All Shelters', href: '/shelters')
+
+    end
+
+    it 'can see link to create new shelter' do
+
+      visit '/shelters'
+
+      expect(page).to have_link('Create New Shelter')
+      assert_equal '/shelters/new', current_path
 
     end
 
