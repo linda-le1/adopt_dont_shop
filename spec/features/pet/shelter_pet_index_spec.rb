@@ -9,7 +9,7 @@ RSpec.describe 'as a user', type: :feature do
                                  state: 'CO',
                                  zip_code: '80004')
 
-      @dog_1 = @shelter_1.pets.create!(image_url: '/',
+      @dog_1 = @shelter_1.pets.create!(image_url: 'https://www.iams.com/breedselector/images/b930c50ed8ba25d25eb19534ca2511df.jpg',
                          name: 'Tofu',
                          description: 'I am a neutered male, white Terrier Mix who loves to play fetch.',
                          approximate_age: 4,

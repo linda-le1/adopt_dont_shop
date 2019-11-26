@@ -27,7 +27,7 @@ RSpec.describe 'Shelter new page', type: :feature do
       click_on('Add New Pet for Adoption')
       assert_equal "/shelters/#{@shelter_1.id}/pets/new", current_path
 
-      fill_in 'image_url',      with: '/'
+      fill_in 'image_url',      with: "https://www.iams.com/breedselector/images/b930c50ed8ba25d25eb19534ca2511df.jpg"
       fill_in 'name',   with: 'Kumo'
       fill_in 'description',      with: 'Active Shiba Inu who enjoys long walks.'
       fill_in 'approximate_age',     with: 2
@@ -35,8 +35,9 @@ RSpec.describe 'Shelter new page', type: :feature do
       click_button 'Submit'
 
       assert_equal "/shelters/#{@shelter_1.id}/pets", current_path
+      save_and_open_page
 
-      expect(page).to have_xpath("//img[@src='/']")
+      expect(page).to have_xpath("//img[@src='https://www.iams.com/breedselector/images/b930c50ed8ba25d25eb19534ca2511df.jpg']")
       expect(page).to have_content('Kumo')
       expect(page).to have_content('Active Shiba Inu who enjoys long walks.')
       expect(page).to have_content(2)
