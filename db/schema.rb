@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191125042512) do
+ActiveRecord::Schema.define(version: 20191126025625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "pets", force: :cascade do |t|
-    t.string "image"
+    t.string "image_url"
     t.string "name"
     t.integer "approximate_age"
     t.string "sex"
-    t.string "shelter_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_adoptable", default: true
