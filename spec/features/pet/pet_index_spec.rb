@@ -43,7 +43,7 @@ RSpec.describe 'Pets index page', type: :feature do
       expect(page).to have_content(@dog_1.name)
       expect(page).to have_content(@dog_1.approximate_age)
       expect(page).to have_content(@dog_1.sex)
-      expect(page).to have_content(@dog_1.shelter_name)
+      expect(page).to have_content(@shelter_1.name)
 
     end
   end
