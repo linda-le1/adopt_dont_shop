@@ -21,7 +21,20 @@ RSpec.describe 'As a visitor', type: :feature do
 
     end
 
-    xit 'can see prepopulated info on that shelter in the form' do
+    it 'can see prepopulated info on that shelter in the form' do
+
+        visit "/shelters/#{@shelter_1.id}"
+
+        expect(page).to have_link('Update This Shelter')
+
+        click_link 'Update This Shelter'
+
+        expect(find_field('name').value).to eq 'Denver Animal Shelter'
+        expect(find_field('address').value).to eq '123 Colfax Ave'
+        expect(find_field('city').value).to eq 'Denver'
+        expect(find_field('state').value).to eq 'CO'
+        expect(find_field('zip_code').value).to eq '80004'
+
     end
 
     it 'can update shelter information through a form' do
