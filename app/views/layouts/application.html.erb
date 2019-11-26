@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AdoptDontShop</title>
+    <title>Turing Module 2 Solo Project: Adopt Don't Shop</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lato:300,400&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
+    <nav class = "navbar">
+  <%= link_to "Pets", "/pets" %><%= link_to "Shelters", "/shelters" %>
+  
+    </nav>
     <%= yield %>
   </body>
 </html>

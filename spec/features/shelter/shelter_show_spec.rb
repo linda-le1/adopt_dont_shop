@@ -49,12 +49,6 @@ RSpec.describe 'Shelter show page', type: :feature do
       click_on('Adoptable Pets')
       expect(current_path).to eq "/shelters/#{@shelter_1.id}/pets"
 
-      expect(page).to have_xpath("//img[@src='test_url']")
-      expect(page).to have_content(@dog_1.name)
-      expect(page).to have_content(@dog_1.approximate_age)
-      expect(page).to have_content(@dog_1.sex)
-      expect(page).to have_content(@dog_1.description)
-
     end
   end
 end

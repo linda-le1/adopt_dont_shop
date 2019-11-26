@@ -35,8 +35,7 @@ RSpec.describe 'Shelter new page', type: :feature do
       click_button 'Submit'
 
       assert_equal "/shelters/#{@shelter_1.id}/pets", current_path
-      save_and_open_page
-
+      
       expect(page).to have_xpath("//img[@src='https://www.iams.com/breedselector/images/b930c50ed8ba25d25eb19534ca2511df.jpg']")
       expect(page).to have_content('Kumo')
       expect(page).to have_content('Active Shiba Inu who enjoys long walks.')
