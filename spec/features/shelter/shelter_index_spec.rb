@@ -4,9 +4,17 @@ RSpec.describe 'Shelter index page', type: :feature do
   describe 'As a visitor' do
     before :each do
 
-      @shelter_1 = Shelter.create!(name: 'Denver Animal Shelter')
-      @shelter_2 = Shelter.create!(name: 'Colorado Shiba Inu Rescue')
+      @shelter_1 = Shelter.create!(name: 'Denver Pet Shelter',
+                                 address: '123 Colfax Ave',
+                                 city: 'Denver',
+                                 state: 'CO',
+                                 zip_code: '80004')
 
+      @shelter_2 = Shelter.create!(name: 'Colorado Magical Creatures Rescue',
+                                  address: '777 Colorado Blvd',
+                                  city: 'Denver',
+                                  state: 'CO',
+                                  zip_code: '80012')
    end
 
     it 'can see the name of each shelter in the system' do
@@ -21,8 +29,8 @@ RSpec.describe 'Shelter index page', type: :feature do
 
       visit '/shelters'
 
-      expect(page).to have_link('Denver Animal Shelter', href: "/shelters/#{@shelter_1.id}")
-      expect(page).to have_link('Colorado Shiba Inu Rescue', href: "/shelters/#{@shelter_2.id}")
+      expect(page).to have_link('Denver Pet Shelter', href: "/shelters/#{@shelter_1.id}")
+      expect(page).to have_link('Colorado Magical Creatures Rescue', href: "/shelters/#{@shelter_2.id}")
 
     end
 
