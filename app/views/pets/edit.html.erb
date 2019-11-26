@@ -4,16 +4,17 @@
 <div class='center-form'>
 <h2> Edit the following information: </h2>
 <%= form_tag "/pets/#{@pet.id}", method: 'patch' do %>
-  <%= label_tag :image_url %>
-  <%= text_field_tag :image_url %><br/>
-  <%= label_tag :name %>
-  <%= text_field_tag :name %><br/>
-  <%= label_tag :description %>
-  <%= text_field_tag :description %><br/>
-  <%= label_tag :approximate_age %>
-  <%= text_field_tag :approximate_age %><br/>
-  <%= label_tag :sex %>
-  <%= text_field_tag :sex %><br/>
+  <%= label_tag 'New Image URL: ' %>
+  <%= text_field_tag :image_url, @pet.image_url %><br/>
+  <br></br>
+  <%= label_tag 'Name: ' %>
+  <%= text_field_tag :name, @pet.name %><br/>
+  <%= label_tag 'Description: '%>
+  <%= text_area_tag :description, @pet.description %><br/>
+  <%= label_tag 'Approximate Age: '%>
+  <%= text_field_tag :approximate_age, @pet.approximate_age  %><br/>
+  <%= label_tag 'Sex: ' %>
+  <%= text_field_tag :sex, @pet.sex %><br/>
 <%= submit_tag 'Submit' %>
 <% end %>
 </div>

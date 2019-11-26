@@ -18,7 +18,19 @@ RSpec.describe 'as a user', type: :feature do
 
     end
 
-    xit 'can see prepopulated info on that pet in the form' do
+    it 'can see prepopulated info on that pet in the form' do
+
+      visit "pets/#{@dog_1.id}"
+
+      click_on 'Edit Pet'
+      assert_equal "/pets/#{@dog_1.id}/edit", current_path
+
+      expect(find_field('image_url').value).to eq '/'
+      expect(find_field('name').value).to eq 'Tofu'
+      expect(find_field('description').value).to eq 'I am a neutered male, white Terrier Mix who loves to play fetch.'
+      expect(find_field('approximate_age').value).to eq '4'
+      expect(find_field('sex').value).to eq 'M'
+
     end
 
     it 'can update a pet on the show page' do
@@ -33,6 +45,7 @@ RSpec.describe 'as a user', type: :feature do
       expect(page).to have_field('description')
       expect(page).to have_field('approximate_age')
       expect(page).to have_field('sex')
+      save_and_open_page
 
       fill_in 'name',      with: 'Fido'
       fill_in 'description',   with: 'Sweet terrier mix who would love a quieter home.'
