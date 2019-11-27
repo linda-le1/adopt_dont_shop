@@ -1,8 +1,5 @@
-<div class='secondary-nav'>
-  <%= link_to 'Create New Shelter', '/shelters/new', method: :get%>
-</div>
-
 <h1> Adopt Don't Shop: Shelter List </h1>
+<h2> <%= link_to 'Create New Shelter', '/shelters/new', method: :get%></h2>
 <% @shelters.each do |shelter| %>
     <div class='center-div'>
       <h2> <%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
