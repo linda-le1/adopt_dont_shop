@@ -48,5 +48,13 @@ RSpec.describe 'as a user', type: :feature do
 
       assert_equal "/shelters/#{@shelter_1.id}/pets/new", current_path
     end
+
+    it 'can see how many adoptable pets are at that shelter'  do
+
+      visit "/shelters/#{@shelter_1.id}/pets"
+
+      expect(page).to have_content("Number of Pets Available: #{@shelter_1.pets.length}")
+
+    end
   end
 end
