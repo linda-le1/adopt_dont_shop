@@ -45,7 +45,6 @@ RSpec.describe 'as a user', type: :feature do
       expect(page).to have_field('description')
       expect(page).to have_field('approximate_age')
       expect(page).to have_field('sex')
-      save_and_open_page
 
       fill_in 'name',      with: 'Fido'
       fill_in 'description',   with: 'Sweet terrier mix who would love a quieter home.'
