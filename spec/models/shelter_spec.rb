@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Shelter, type: :model do
   before :each do
 
-    @shelter_1 = Shelter.create(name: 'Denver Animal Shelter',
+    @shelter_1 = Shelter.create!(name: 'Denver Animal Shelter',
                                address: '123 Colfax Ave',
                                city: 'Denver',
                                state: 'CO',
@@ -36,6 +36,14 @@ describe Shelter, type: :model do
   it ".count_pets" do
     expect(@shelter_1.count_pets).to eq 1
   end
-end
 
+  describe 'test' do
+    it 'test' do
+      @dog_1.update({"image_url"=>"https://media.wired.com/photos/5dd593a829b9c40008b179b3/
+        master/w_2560%2Cc_limit/Cul-BabyYoda_mandalorian-thechild-1_af408bfd.jpg", "name"=>"Baby Yoda", "description"=>"I
+        am an adorable one strong with the Force. Enjoys eating frogs.", "approximate_age"=>"500", "sex"=>"M", "id"=>"1"})
+      @dog_1.save
+    end
+  end
+end
 end
