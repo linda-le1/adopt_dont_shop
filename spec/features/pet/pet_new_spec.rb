@@ -27,20 +27,20 @@ RSpec.describe 'Shelter new page', type: :feature do
       click_on('Add New Pet for Adoption')
       assert_equal "/shelters/#{@shelter_1.id}/pets/new", current_path
 
-      fill_in 'image_url',      with: "https://www.iams.com/breedselector/images/b930c50ed8ba25d25eb19534ca2511df.jpg"
-      fill_in 'name',   with: 'Kumo'
+      fill_in 'image_url',        with: "https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/shiba-inu-detail.jpg"
+      fill_in 'name',             with: 'Kuma'
       fill_in 'description',      with: 'Active Shiba Inu who enjoys long walks.'
-      fill_in 'approximate_age',     with: 2
-      fill_in 'sex',  with: 'Male'
+      fill_in 'approximate_age',  with: 2
+      fill_in 'sex',              with: 'F'
       click_button 'Submit'
 
       assert_equal "/shelters/#{@shelter_1.id}/pets", current_path
-      
-      expect(page).to have_xpath("//img[@src='https://www.iams.com/breedselector/images/b930c50ed8ba25d25eb19534ca2511df.jpg']")
-      expect(page).to have_content('Kumo')
+
+      expect(page).to have_xpath("//img[@src='https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/shiba-inu-detail.jpg']")
+      expect(page).to have_content('Kuma')
       expect(page).to have_content('Active Shiba Inu who enjoys long walks.')
       expect(page).to have_content(2)
-      expect(page).to have_content('Male')
+      expect(page).to have_content('F')
       expect(page).to have_content ('Adoptable')
 
     end

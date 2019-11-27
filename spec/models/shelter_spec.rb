@@ -26,6 +26,7 @@ describe Shelter, type: :model do
 
     it {should validate_presence_of :zip_code}
     it { should validate_length_of(:zip_code).is_equal_to(5) }
+    it {should_not allow_value("80").for(:zip_code) }
   end
 
   describe 'relationships' do
