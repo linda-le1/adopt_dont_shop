@@ -5,8 +5,8 @@
   <div class='center-div'>
   <%= image_tag("#{pet.image_url}", {:style => "width:250px;"}) %>
   <h2> <%= pet.name %></h2>
-  <p>Approximate Age: <%= pet.approximate_age %></p>
   <p>Description: <%= pet.description%></p>
+  <p>Approximate Age: <%= pet.approximate_age %></p>
   <p>Sex: <%= pet.sex %></p>
   <% if pet.is_adoptable %>
    <p>Status: Adoptable</p>
